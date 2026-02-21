@@ -68,11 +68,11 @@ GIF: animación básica
 SVG: vectorial
 TIFF: alta calidad
 
-Prácticas incluidas
+# Prácticas incluidas
 
 • Dibujo de un polígono en Blender
 
-´´ import bpy
+import bpy
 import math
 
 def crear_poligono_2d(nombre, lados, radio):
@@ -106,7 +106,6 @@ bpy.ops.object.delete()
 
 # Crear el polígono
 crear_poligono_2d("poligono2D", lados=6, radio=5)
-´´
 
 <img width="1528" height="915" alt="image" src="https://github.com/user-attachments/assets/82b28418-e15e-48d9-96c0-2a699a903865" />
 

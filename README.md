@@ -1,4 +1,4 @@
-# Unidad-I.-Introducci-n-a-la-graficaci-n-por-computadora
+# Unidad-I.-Introduccion a la graficacion por computadora
 
 1.1 Historia y Evolución de la Graficación por Computadora
 
@@ -21,8 +21,11 @@ Interfaces UI/UX
 
 La graficación se fundamenta en:
 Geometría analítica
+
 Álgebra lineal (vectores y matrices)
+
 Transformaciones (traslación, rotación, escalado)
+
 Trigonometría (seno y coseno)
 
 Ejemplo:
@@ -34,17 +37,27 @@ para posicionar objetos en un patrón circular.
 
 1.4 Modelos de Color: RGB, CMY, HSV y HSL
 RGB (Red, Green, Blue)
+
 Modelo aditivo usado en pantallas.
+
 Combina luz roja, verde y azul.
+
 CMY (Cyan, Magenta, Yellow)
+
 Modelo sustractivo usado en impresión.
+
 HSV (Hue, Saturation, Value)
+
 Organiza el color según tono, saturación y brillo.
+
 HSL (Hue, Saturation, Lightness)
+
 Similar a HSV pero con mejor control de luminosidad.
 
-Iluminar un cubo en Blender
+# Iluminar un cubo en Blender
+
 Crear un cubo.
+
 Agregar luz tipo Point o Sun.
 Activar modo Rendered.
 Ajustar intensidad y posición.

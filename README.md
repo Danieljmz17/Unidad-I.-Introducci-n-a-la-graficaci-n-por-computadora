@@ -57,13 +57,35 @@ Similar a HSV pero con mejor control de luminosidad.
 # Iluminar un cubo en Blender
 
 Crear un cubo.
+import bpy
 
-Agregar luz tipo Point o Sun.
-Activar modo Rendered.
-Ajustar intensidad y posición.
-Aplicar material con Principled BSDF.
-Modificar Roughness y Metallic.
-Ajustar sombras.
+#  Limpiar escena
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.delete()
+
+#  Crear cubo
+bpy.ops.mesh.primitive_cube_add(size=2, location=(0, 0, 0))
+cubo = bpy.context.active_object
+
+# Crear material con Principled BSDF
+material = bpy.data.materials.new(name="MaterialCubo")
+material.use_nodes = True
+
+# Acceder al nodo Principled BSDF
+bsdf = material.node_tree.nodes["Principled BSDF"]
+
+# Configurar propiedades del material
+bsdf.inputs["Base Color"].default_value = (0.2, 0.5, 0.9, 1)  # Color azul
+bsdf.inputs["Metallic"].default_value = 0.5
+bsdf.inputs["Roughness"].default_value = 0.3
+
+# Asignar material al cubo
+cubo.data.materials.append(material)
+
+# Agregar luz tipo Point
+bpy.ops.object.light_add(type='POINT', location=(4, -4, 4))
+luz = bpy.context.active_object
+luz.data.energy = 1000
 
 1.5 Representación y Trazo de Líneas y Polígonos
 Las líneas y polígonos son la base del modelado gráfico.
